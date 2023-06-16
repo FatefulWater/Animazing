@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: auto;
+}
+
+.form-nav {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
