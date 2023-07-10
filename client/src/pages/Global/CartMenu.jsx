@@ -36,6 +36,7 @@ const CartMenu = () => {
   }, 0);
 
   const Total = (Math.round(totalPrice * 100) / 100).toFixed(2);
+  
 
   const onToken = (token) => {
     setStripeToken(token);
