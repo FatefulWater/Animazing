@@ -30,6 +30,9 @@ const ShoppingList = ({ searchResults }) => {
     getProducts();
   },[value]); // eslint-disable-line react-hooks/exhaustive-deps
   
+  const results = searchResults.map(product => <Product key={product._id} product={product} />) 
+  const content = results?.length ? results : <Typography> No Matching Product </Typography>
+  
   const Figure = products.filter(product =>{
     return product.category.includes("Figure");
   })
@@ -40,8 +43,7 @@ const ShoppingList = ({ searchResults }) => {
     return product.category.includes("Manga");
   })
 
-  const results = searchResults.map(product => <Product key={product._id} product={product} />) //
-  const content = results?.length ? results : <Typography> No Matching Product </Typography> //
+   
   
   return(
     <Box width="100%" margin="60px auto" >
